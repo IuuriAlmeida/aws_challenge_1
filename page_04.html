@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Document</title>
+</head>
+
+<style>
+    .txt-container {
+        max-width: 541px;
+        text-align: start;
+    }
+    .button-container {
+        margin-top: 0px;
+    }
+
+    
+@media screen and (max-width: 480px) {
+    .txt-container {
+        max-width: 326px;
+    }
+}
+    
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="img-container">
+            <img src="./assets/img/3.svg"/>
+        </div>
+        <form class="txt-container" action="page_05.html">
+            <h4>How do you decide to invest?</h4>
+
+            <select required>
+                <option value="">Choose an option</option>
+                <option value="opcao 01">Wanted to make more profit</option>
+                <option value="opcao 02">Saw a way to secure money for the future</option>
+                <option value="opcao 03">It's beter than just saving money</option>
+            </select>
+
+            <h4>What resources have you used or are you using for your training?</h4>
+            <span style="display: none;">Select at least one of the options bellow.</span>
+            <div class="radio-container">
+                <input type="checkbox" id="input_resources_stock" name="financial_markets" value="input_resources_stock">
+                <label for="input_resources_stock">stock market</label>
+            </div>
+            <div class="radio-container">
+                <input type="checkbox" id="input_resources_foreign_exchange" name="financial_markets" value="input_resources_foreign_exchange">
+                <label for="input_resources_foreign_exchange">foreign exchange</label>
+            </div>
+            <div class="radio-container">
+                <input type="checkbox" id="input_resources_commodity" name="financial_markets" value="input_resources_commodity">
+                <label for="input_resources_commodity">commodity</label>
+            </div>
+            <div class="radio-container">
+                <input type="checkbox" id="input_resources_bond_market" name="financial_markets" value="input_resources_bond_market">
+                <label for="input_resources_bond_market">bond market</label>
+            </div>
+            <div class="radio-container">
+                <input type="checkbox" id="input_resources_cryptocurrency" name="financial_markets" value="input_resources_cryptocurrency">
+                <label for="input_resources_cryptocurrency">cryptocurrency market</label>
+            </div>
+
+            <div class="button-container" style="margin-top: 32px;">
+                <a href="page_03.html" class="button">Back</a>
+                <button type="submit" class="button">Next</button>
+            </div>
+            <div class="button-container">
+                <a href="page_05.html" class="button">Skip</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script>
+    const form = document.querySelector('form');
+    const all_checkboxes = document.querySelectorAll('input[type=checkbox]');
+    const checkboxes_feedback = document.querySelector('span');
+    
+    function form_submit(e) {
+        const checkboxes_marked = 0;
+        for(let i = 0; i < all_checkboxes.length; i++) {
+            if(all_checkboxes[i].checked) {
+                checkboxes_marked += 1;
+            }
+        }
+        
+        if(checkboxes_marked >= 1) {
+            return true;
+        } else{
+            checkboxes_feedback.style.display = 'block';
+            e.preventDefault();
+            return false;
+        }
+    }
+
+    form.addEventListener('submit', form_submit)
+</script>
+
+</html>

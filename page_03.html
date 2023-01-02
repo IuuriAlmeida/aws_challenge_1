@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Document</title>
+</head>
+
+<style>
+    .txt-container {
+        max-width: 541px;
+        text-align: start;
+    }
+    .button-container {
+        margin-top: 0px;
+    }
+
+    
+@media screen and (max-width: 480px) {
+    .txt-container {
+        max-width: 326px;
+    }
+}
+    
+</style>
+
+
+<body>
+    <div class="wrapper">
+        <div class="img-container">
+            <img src="./assets/img/2.svg"/>
+        </div>
+        <form class="txt-container" action="page_04.html" onsubmit="form_submit">
+            <h4>What is the status of your account?</h4>
+
+            <select required>
+                <option value="">Choose an option</option>
+                <option value="opcao 01">Not created</option>
+                <option value="opcao 02">Created, but inactive</option>
+                <option value="opcao 03">Created</option>
+            </select>
+
+            <h4>In which financial markets do you operate?</h4>
+            
+            <div class="radio-container">
+                <input required type="radio" id="input_financial_markets_01" name="financial_markets" value="input_financial_markets_01">
+                <label for="input_financial_markets_01">stock market</label>
+            </div>
+            <div class="radio-container">
+                <input required type="radio" id="input_financial_markets_02" name="financial_markets" value="input_financial_markets_02">
+                <label for="input_financial_markets_02">foreign exchange</label>
+            </div>
+            <div class="radio-container">
+                <input required type="radio" id="input_financial_markets_03" name="financial_markets" value="input_financial_markets_03">
+                <label for="input_financial_markets_03">commodity</label>
+            </div>
+            <div class="radio-container">
+                <input required type="radio" id="input_financial_markets_04" name="financial_markets" value="input_financial_markets_04">
+                <label for="input_financial_markets_04">bond market</label>
+            </div>
+            <div class="radio-container">
+                <input required type="radio" id="input_financial_markets_04" name="financial_markets" value="input_financial_markets_04">
+                <label for="input_financial_markets_04">cryptocurrency market</label>
+            </div>
+
+            <div class="button-container" style="margin-top: 32px;">
+                <a href="page_02.html" class="button">Back</a>
+                <button type="submit" class="button">Next</button>
+            </div>
+            <div class="button-container">
+                <a href="page_04.html" class="button">Skip</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

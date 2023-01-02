@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Document</title>
+</head>
+
+<style>
+    .txt-container {
+        max-width: 541px;
+        text-align: start;
+    }
+    .button-container {
+        margin-top: 0px;
+    }
+
+    
+@media screen and (max-width: 480px) {
+    .txt-container {
+        max-width: 326px;
+    }
+}
+    
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="img-container">
+            <img src="./assets/img/4.svg"/>
+        </div>
+        <form class="txt-container" action="page_06.html">
+            <h4>If you or someone close to you has already made a loss on the investment, write down the details</h4>
+
+            <textarea maxlength="130" required></textarea>
+            <span id="textarea_count">0/130</span>
+
+            <div class="button-container" style="margin-top: 32px;">
+                <a href="page_04.html" class="button">Back</a>
+                <button type="submit" class="button">Next</button>
+            </div>
+            <div class="button-container">
+                <a href="page_06.html" class="button">Skip</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script>
+    const textarea = document.querySelector('textarea');
+    const textarea_count = document.querySelector('#textarea_count');
+
+    function update_textarea_count(e) {
+        if(e.keyCode == 13 && !e.shiftKey) { e.preventDefault() }
+        textarea_count.innerHTML = textarea.textLength + '/130'
+    }
+
+
+    textarea.addEventListener('keyup', update_textarea_count)
+    textarea.addEventListener('keydown', update_textarea_count)
+</script>
+
+</html>

@@ -1,0 +1,290 @@
+
+@font-face {
+    font-family: roboto;
+    src: url("/assets/font/Roboto-Regular.ttf");
+}
+
+* {
+    font-family: roboto, sans-serif;
+    margin: 0;
+    transition: all 125ms ease-in-out;
+}
+
+p,
+h2,
+button {
+    display: block;
+}
+
+:root {
+    --green: #3eb25e;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 79px;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    margin-bottom: 61px;
+}
+
+.txt-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    max-width: 443px;
+    flex: 1 0 auto;
+}
+
+.txt-container p {
+    font-size: 28px;
+    max-width: 443px;
+    line-height: 32.81px;
+}
+
+.txt-container h1 {
+    font-size: 111px;
+    line-height: 130.08px;
+}
+
+.txt-container h2 {
+    font-size: 39px;
+    line-height: 45.7px;
+}
+
+.txt-container h3 {
+    font-size: 29px;
+    line-height: 33.98px;
+}
+
+.txt-container h4 {
+    font-size: 26px;
+    line-height: 30.47px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 27px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.button-container .button {
+    flex: 1;
+    padding: 4px 14px 4px 14px;
+    background: var(--green);
+    border-radius: 35px;
+    border: none;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.img-container {
+    max-width: 552px;
+    margin-top: 61px;
+}
+
+.img-container img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+select {
+    border-radius: 20px;
+    padding: 8px 12px 8px 12px;
+    font-size: 24px;
+}
+
+select option {
+    font-size: 18px;
+}
+
+.radio-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 11px;
+}
+.radio-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 11px;
+}
+
+.radio-container label {
+    font-size: 26px;
+}
+
+.radio-container input[type=radio] {
+    position: relative;
+    border: none;
+    width: 25px;
+    height: 25px;
+    filter: hue-rotate(300deg);
+}
+
+.radio-container input[type=radio]::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(62, 178, 94, 0.3);
+    border-radius: 100%;
+    
+}
+
+textarea {
+    min-height: 255px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 22px;
+}
+
+form input[type=text], form input[type=email] {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 9px 12px;
+    font-size: 26px;
+}
+
+::placeholder {
+    opacity: .5;
+}
+
+form input[type=number] {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 9px 12px;
+    font-size: 26px;
+    max-width: 152px;
+}
+
+#textarea_count {
+    opacity: .5;
+    font-size: 22px;
+}
+
+input[type=checkbox] {
+    width: 25px;
+    height: 25px;
+    filter: hue-rotate(300deg);
+    position: relative;
+}
+
+.radio-container input[type=radio] {
+position: relative;
+border: none;
+width: 25px;
+    height: 25px;
+    filter: hue-rotate(300deg);
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #FFFF7D;
+    color: black;
+}
+
+
+@media screen and (max-width: 480px) {
+    
+    .wrapper {
+        flex-direction: column;
+        gap: 27px;
+    }
+
+    .img-container {
+        max-width: 403px;
+        max-height: 416px;
+    }
+
+    .txt-container p {
+        font-size: 18px;
+        line-height: 21.9px;
+    }
+
+    .txt-container h1 {
+        font-size: 53px;
+        line-height: 62.11px;
+    }
+
+    .txt-container h2 {
+        font-size: 31px;
+        line-height: 35.16px;
+    }
+
+    .txt-container h4 {
+        font-size: 16px;
+        line-height: 18.75px;
+    }
+
+    .txt-container {
+        flex: none;
+        justify-content: center;
+        align-items: center;
+        max-width: 326px;
+    }
+
+    form.txt-container {
+        align-items: flex-start;
+    }
+
+    .button-container {
+        gap: 18px;
+        max-width: 333px;
+    }
+
+    form.txt-container .button-container .button {
+        flex: 1;
+    }
+
+    .button-container .button:not(.big) {
+        font-size: 15px;
+        flex: none;
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    select, .radio-container {
+        width: 100%;
+    }
+
+    select {
+        font-size: 16px;
+    }
+    
+    .radio-container label {
+        font-size: 16px;
+    }
+    
+    .checkbox-container label {
+        font-size: 16px;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    form input[type=text], form input[type=email], form input[type=number] {
+        font-size: 16px;
+    }
+}
